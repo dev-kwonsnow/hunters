@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/keyword_item_view"
+    android:layout_width="match_parent"
+    android:layout_height="113dp"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/best_badge_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_common_badge_best"
+        android:elevation="2dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#eaeaea"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="12dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/spoqahansansbold"
+        android:textColor="#3d3d3d"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/thumbnail"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="이름" />
+
+    <View
+        android:id="@+id/name_seperater"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/seperate_circle"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/special_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="4dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/spoqahansansregular"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/name_seperater"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="디자인전문" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:includeFontPadding="false"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:fontFamily="@font/spoqahansansregular"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:text="안녕하세요." />
+
+    <ImageView
+        android:id="@+id/star_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintStart_toEndOf="@+id/thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:src="@drawable/ic_common_assessment" />
+
+    <TextView
+        android:id="@+id/grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="6dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/spoqahansansbold"
+        android:textColor="#3d3d3d"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/star_icon"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:text="0" />
+
+    <View
+        android:id="@+id/grade_seperater"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/seperate_circle"
+        app:layout_constraintStart_toEndOf="@+id/grade"
+        app:layout_constraintTop_toBottomOf="@+id/description"/>
+
+    <ImageView
+        android:id="@+id/like_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintStart_toEndOf="@+id/grade_seperater"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:src="@drawable/ic_common_like" />
+
+    <TextView
+        android:id="@+id/like_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="6dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/spoqahansansbold"
+        android:textColor="#3d3d3d"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/like_icon"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:text="0" />
+
+    <View
+        android:id="@+id/like_seperater"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/seperate_circle"
+        app:layout_constraintStart_toEndOf="@+id/like_cnt"
+        app:layout_constraintTop_toBottomOf="@+id/description"/>
+
+    <TextView
+        android:id="@+id/follower_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="6dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/spoqahansansregular"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/like_seperater"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:text="팔로워" />
+
+    <TextView
+        android:id="@+id/follower_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="4dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/spoqahansansregular"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/follower_title"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:text="0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
