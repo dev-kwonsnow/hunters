@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_main"
+        android:icon="@drawable/ic_btn_main_tap_matching_select"
+        android:enabled="true"
+        android:title="@string/action_main" />
+    <item
+        android:id="@+id/action_recruit"
+        android:icon="@drawable/ic_btn_main_tap_recruit_normal"
+        android:enabled="true"
+        android:title="@string/action_recruit" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_btn_main_tap_search_normal"
+        android:enabled="true"
+        android:title="@string/action_search" />
+    <item
+        android:id="@+id/action_doing"
+        android:icon="@drawable/ic_btn_main_tap_activity_normal"
+        android:enabled="true"
+        android:title="@string/action_doing" />
+    <item
+        android:id="@+id/action_profile"
+        android:icon="@drawable/ic_btn_main_tap_profile_normal"
+        android:enabled="true"
+        android:title="@string/action_profile" />
+</menu>
