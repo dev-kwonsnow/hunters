@@ -1,5 +1,6 @@
 package com.dragonbro.hunters.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dragonbro.hunters.R
 import com.dragonbro.hunters.data.SecondHunterData
+import com.dragonbro.hunters.ui.HunterProfileActivity
 import kotlinx.android.synthetic.main.second_hunter_item.view.*
 
 class SecondHuntersRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -48,6 +50,9 @@ class SecondHuntersRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolde
 
                 itemView.keyword_item_view.setOnClickListener {
                     selectedId = data.id
+                    val intent = Intent(itemView.context, HunterProfileActivity::class.java)
+                    intent.putExtra("hunter_id", selectedId)
+                    itemView.context.startActivity(intent)
                 }
             }
         }

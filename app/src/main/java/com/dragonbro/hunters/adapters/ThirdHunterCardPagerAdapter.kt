@@ -1,6 +1,7 @@
 package com.dragonbro.hunters.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
 import com.dragonbro.hunters.R
 import com.dragonbro.hunters.data.ThirdHunterData
+import com.dragonbro.hunters.ui.HunterProfileActivity
 import com.dragonbro.hunters.util.DividerItemDecoration
 import kotlinx.android.synthetic.main.hunter_card_item.view.*
 
@@ -34,6 +36,12 @@ class ThirdHunterCardPagerAdapter(val context: Context, val mDataList: MutableLi
         keywordRecyclerView.addItemDecoration(keywordDividerItemDecoration)
         keywordRecyclerView.layoutManager = LinearLayoutManager(context)
         keywordRecyclerView.adapter = thirdListAdapter
+
+        view.hunter_card_view.setOnClickListener {
+            val intent = Intent(view.context, HunterProfileActivity::class.java)
+            intent.putExtra("hunter_id", mDataList[position].id)
+            view.context.startActivity(intent)
+        }
 
         container.addView(view)
         return view

@@ -123,7 +123,7 @@ class MainFragment : Fragment() {
         secondDividerItemDecoration.setDrawable(ContextCompat.getDrawable(context!!, R.drawable.seperate_line)!!)
         view.second_hunter_lists.addItemDecoration(keywordDividerItemDecoration)
         view.second_hunter_lists.layoutManager = LinearLayoutManager(context!!)
-        view.second_hunter_lists.adapter = keywordListAdapter
+        view.second_hunter_lists.adapter = secondListAdapter
 
         val thirdHunterCardPagerAdapter = ThirdHunterCardPagerAdapter(context!!, thirdHunterCardDataList)
         view.card_view_pager.adapter = thirdHunterCardPagerAdapter

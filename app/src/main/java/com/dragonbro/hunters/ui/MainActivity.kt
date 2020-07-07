@@ -1,22 +1,9 @@
 package com.dragonbro.hunters.ui
 
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
-import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.viewpager.widget.ViewPager
 import com.dragonbro.hunters.R
-import com.dragonbro.hunters.data.KeywordHunterData
-import com.dragonbro.hunters.util.DividerItemDecoration
-import com.dragonbro.hunters.data.SecondHunterData
-import com.dragonbro.hunters.adapters.KeywordHuntersRecyclerAdapter
-import com.dragonbro.hunters.adapters.ThirdHunterCardPagerAdapter
-import com.dragonbro.hunters.adapters.SecondHuntersRecyclerAdapter
-import com.dragonbro.hunters.data.ThirdHunterData
 import com.dragonbro.hunters.navigation.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
